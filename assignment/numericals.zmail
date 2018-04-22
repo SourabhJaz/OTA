@@ -1,0 +1,28 @@
+var arr=new Array();
+   arr[0]=new Image();
+   arr[0].src="slide1.png";  
+   arr[1]=new Image();
+   arr[1].src="slide2.png";
+   arr[2]=new Image();
+   arr[2].src="slide3.png";
+   arr[3]=new Image();
+   arr[3].src="slide4.png";
+   arr[4]=new Image();
+   arr[4].src="slide5.png";
+   arr[5]=new Image();
+   arr[5].src="slide6.png";
+
+  var count=0,s; 
+  function slideit()
+  {
+  document.getElementById('slide1').src=arr[(count)%6].src;
+  document.getElementById('slide2').src=arr[(count+1)%6].src;
+  document.getElementById('slide3').src=arr[(count+2)%6].src;
+  document.getElementById('slide4').src=arr[(count+3)%6].src;
+  if(count<5)
+   count++;
+  else
+   count=0;
+  setTimeout("slideit()",3500);
+  }
+
